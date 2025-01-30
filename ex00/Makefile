@@ -10,6 +10,7 @@ $(addsuffix .cpp, \
 	main \
 	Animal \
 	Dog \
+	Cat \
 ) \
 
 OBJS = $(addprefix $(OUT_DIR)/, $(SRCS:.cpp=.o))
