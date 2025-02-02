@@ -7,21 +7,6 @@ Cat::Cat() {
     std::cout << *this << ": Cat default constructor" << std::endl;
 }
 
-// Cat::Cat(const std::string& sound) {
-//     _init(sound);
-// }
-
-// Cat::Cat(const Cat& copy) {
-//     _initByCopy(copy);
-// }
-
-// Cat& Cat::operator=(const Cat& copy) {
-//     if (this != &copy) {
-//         _initByCopy(copy);
-//     }
-//     return *this;
-// }
-
 /* destructor */
 Cat::~Cat() {
     std::cout << *this << ": Cat destructor" << std::endl;
