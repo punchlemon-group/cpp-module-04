@@ -42,7 +42,7 @@ void Brain::_setIdea(int index, const std::string& idea) {
 /* support */
 void Brain::_init() {
     for (int i = 0; i < 100; ++i) {
-        _setIdea(i, "Idea " + std::to_string(i + 1));
+        _setIdea(i, "Idea");
     }
 }
 
