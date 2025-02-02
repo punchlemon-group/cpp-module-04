@@ -3,18 +3,22 @@
 /* public */
 /* construcotr */
 Animal::Animal() {
+    std::cout << "Animal default constructor" << std::endl;
     _init("...");
 }
 
 Animal::Animal(const std::string& sound) {
+    std::cout << "Animal default constructor" << std::endl;
     _init(sound);
 }
 
 Animal::Animal(const Animal& copy) {
+    std::cout << "Animal copy constructor" << std::endl;
     _initByCopy(copy);
 }
 
 Animal& Animal::operator=(const Animal& copy) {
+    std::cout << "Animal assignation operator" << std::endl;
     if (this != &copy) {
         _initByCopy(copy);
     }
@@ -22,7 +26,10 @@ Animal& Animal::operator=(const Animal& copy) {
 }
 
 /* destructor */
-Animal::~Animal() {}
+Animal::~Animal() {
+    std::cout << "Animal destructor" << std::endl;
+    delete _brain;
+}
 
 /* getter */
 const std::string& Animal::getSound() const {
@@ -58,6 +65,7 @@ void Animal::_setType(const std::string& type) {
 void Animal::_init(const std::string& sound) {
     _setType("Animal");
     _setSound(sound);
+    _brain = new Brain();
 }
 
 void Animal::_initByCopy(const Animal& copy) {

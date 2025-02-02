@@ -9,7 +9,7 @@ public:
     Dog();
     Dog(const std::string& name);
     Dog(const Dog& copy);
-    Dog& operator=(const Dog& copy);
+    // Dog& operator=(const Dog& copy);
 
     /* destructor */
     virtual ~Dog();

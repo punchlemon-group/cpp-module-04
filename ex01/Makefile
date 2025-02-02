@@ -1,6 +1,6 @@
 .PHONY: all clean fclean re
 
-NAME = polymorphism
+NAME = animalsWithBrains
 
 OUT_DIR = out
 SRCS_DIR = srcs
@@ -9,6 +9,7 @@ SRCS = \
 $(addsuffix .cpp, \
 	main \
 	Animal \
+	Brain \
 	Dog \
 	Cat \
 ) \

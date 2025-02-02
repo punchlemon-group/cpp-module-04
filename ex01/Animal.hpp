@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include "Brain.hpp"
 
 class Animal {
 public:
@@ -39,6 +40,7 @@ private:
     /* variable */
     std::string _type;
     std::string _sound;
+    Brain* _brain;
 };
 
 #endif /* __ANIMAL_HPP__ */

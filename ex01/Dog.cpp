@@ -14,12 +14,12 @@ Dog::Dog(const Dog& copy) {
     _initByCopy(copy);
 }
 
-Dog& Dog::operator=(const Dog& copy) {
-    if (this != &copy) {
-        _initByCopy(copy);
-    }
-    return *this;
-}
+// Dog& Dog::operator=(const Dog& copy) {
+//     if (this != &copy) {
+//         _initByCopy(copy);
+//     }
+//     return *this;
+// }
 
 /* destructor */
 Dog::~Dog() {}

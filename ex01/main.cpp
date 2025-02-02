@@ -12,5 +12,14 @@ int main() {
     j->makeSound();
     meta->makeSound();
 
+    Dog dog = Dog();
+    Dog dog2 = Dog(dog);
+    Dog dog3 = Dog();
+    dog3 = dog2;
+
+    delete meta;
+    delete i;
+    delete j;
+
     return 0;
 }
