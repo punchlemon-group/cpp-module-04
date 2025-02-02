@@ -7,9 +7,6 @@ class Dog : virtual public Animal {
 public:
     /* constructor */
     Dog();
-    // Dog(const std::string& name);
-    // Dog(const Dog& copy);
-    // Dog& operator=(const Dog& copy);
 
     /* destructor */
     virtual ~Dog();
