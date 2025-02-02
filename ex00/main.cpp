@@ -12,13 +12,23 @@ int main() {
     j->makeSound();
     meta->makeSound();
 
+    std::cout << std::endl;
+
     Dog dog = Dog();
+    std::cout << std::endl;
     Dog dog2 = Dog();
+    std::cout << std::endl;
     dog = dog2;
+    std::cout << std::endl;
+    Dog dog3 = Dog(dog2);
+    std::cout << std::endl;
 
     delete meta;
+    std::cout << std::endl;
     delete i;
+    std::cout << std::endl;
     delete j;
+    std::cout << std::endl;
 
     return 0;
 }
