@@ -4,25 +4,31 @@
 /* construcotr */
 Animal::Animal() {
     _init("...");
+    std::cout << *this << ": Animal default constructor" << std::endl;
 }
 
 Animal::Animal(const std::string& sound) {
     _init(sound);
+    std::cout << *this << ": Animal default constructor" << std::endl;
 }
 
 Animal::Animal(const Animal& copy) {
     _initByCopy(copy);
+    std::cout << *this << ": Animal copy constructor" << std::endl;
 }
 
 Animal& Animal::operator=(const Animal& copy) {
     if (this != &copy) {
         _initByCopy(copy);
+        std::cout << *this << ": Animal assignation operator" << std::endl;
     }
     return *this;
 }
 
 /* destructor */
-Animal::~Animal() {}
+Animal::~Animal() {
+    std::cout << *this << ": Animal destructor" << std::endl;
+}
 
 /* getter */
 const std::string& Animal::getSound() const {
