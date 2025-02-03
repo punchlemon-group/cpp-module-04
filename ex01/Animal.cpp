@@ -20,6 +20,7 @@ Animal::Animal(const Animal& copy) {
 Animal& Animal::operator=(const Animal& copy) {
     std::cout << "Animal assignation operator" << std::endl;
     if (this != &copy) {
+        delete _brain;
         _initByCopy(copy);
     }
     return *this;
@@ -71,4 +72,9 @@ void Animal::_init(const std::string& sound) {
 void Animal::_initByCopy(const Animal& copy) {
     _setType(copy.getType());
     _setSound(copy.getSound());
+    if (copy._brain) {
+        _brain = new Brain(*(copy._brain));
+    } else {
+        _brain = NULL;
+    }
 }
