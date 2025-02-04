@@ -2,15 +2,15 @@
 #include "Cat.hpp"
 
 int main() {
-    const Animal* meta = new Animal();
-    const Animal* i = new Dog();
-    const Animal* j = new Cat();
+    // const AAnimal* meta = new AAnimal();
+    const AAnimal* i = new Dog();
+    const AAnimal* j = new Cat();
 
     std::cout << i->getType() << " " << std::endl;
     std::cout << j->getType() << " " << std::endl;
     i->makeSound();
     j->makeSound();
-    meta->makeSound();
+    // meta->makeSound();
 
     std::cout << std::endl;
 
@@ -23,8 +23,8 @@ int main() {
     Dog dog3 = Dog(dog2);
     std::cout << std::endl;
 
-    delete meta;
-    std::cout << std::endl;
+    // delete meta;
+    // std::cout << std::endl;
     delete i;
     std::cout << std::endl;
     delete j;

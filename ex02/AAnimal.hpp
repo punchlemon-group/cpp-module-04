@@ -5,26 +5,26 @@
 #include <string>
 #include "Brain.hpp"
 
-class Animal {
+class AAnimal {
 public:
     /* constructor */
-    Animal();
-    Animal(const std::string& sounds);
-    Animal(const Animal& copy);
-    Animal& operator=(const Animal& copy);
+    AAnimal();
+    AAnimal(const std::string& sounds);
+    AAnimal(const AAnimal& copy);
+    AAnimal& operator=(const AAnimal& copy);
 
     /* destructor */
-    virtual ~Animal();
+    virtual ~AAnimal();
 
     /* getter */
     const std::string& getType() const;
     const std::string& getSound() const;
 
     /* general */
-    void makeSound() const;
+    virtual void makeSound() const = 0;
 
     /* free */
-    friend std::ostream& operator<<(std::ostream& os, const Animal& animal);
+    friend std::ostream& operator<<(std::ostream& os, const AAnimal& animal);
 
 protected:
 
@@ -34,7 +34,7 @@ protected:
 
     /* support */
     virtual void _init(const std::string& sound);
-    void _initByCopy(const Animal& copy);
+    void _initByCopy(const AAnimal& copy);
 
 private:
     /* variable */

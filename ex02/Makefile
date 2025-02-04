@@ -1,6 +1,6 @@
 .PHONY: all clean fclean re
 
-NAME = animalsWithBrains
+NAME = abstractAnimalsWithBrains
 
 OUT_DIR = out
 SRCS_DIR = srcs
@@ -8,7 +8,7 @@ SRCS_DIR = srcs
 SRCS = \
 $(addsuffix .cpp, \
 	main \
-	Animal \
+	AAnimal \
 	Brain \
 	Dog \
 	Cat \
