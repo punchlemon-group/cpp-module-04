@@ -8,6 +8,7 @@ SRCS_DIR = srcs
 SRCS = \
 $(addsuffix .cpp, \
 	main \
+	AMateria \
 ) \
 
 OBJS = $(addprefix $(OUT_DIR)/, $(SRCS:.cpp=.o))
