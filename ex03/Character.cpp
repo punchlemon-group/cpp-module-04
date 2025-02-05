@@ -40,6 +40,7 @@ void Character::unequip(int idx) {
 }
 
 void Character::use(int idx, ICharacter& target) {
-    (void)idx;
-    (void)target; // WIP
+    if (0 <= idx && idx < _materiaIdx) {
+        _materias[idx]->use(target);
+    }
 }
