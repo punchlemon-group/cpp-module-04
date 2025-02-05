@@ -1,6 +1,8 @@
 #ifndef __CHARACTER_HPP__
 #define __CHARACTER_HPP__
 
+#define NUM_OF_MATERIAS 4
+
 #include <iostream>
 #include "ICharacter.hpp"
 
@@ -23,6 +25,8 @@ public:
 
 private:
     std::string _name;
+    int _materiaIdx;
+    AMateria* _materias[NUM_OF_MATERIAS];
 
 };
 

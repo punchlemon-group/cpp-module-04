@@ -23,18 +23,24 @@ int main()
     tmp = src->createMateria("ice");
     std::cout << std::endl;
 
-    delete tmp; // WIP
-    std::cout << std::endl; // WIP
-    // me->equip(tmp);
-    // tmp = src->createMateria("cure");
-    // me->equip(tmp);
+    me->equip(tmp);
+    std::cout << std::endl;
+
+    tmp = src->createMateria("cure");
+    std::cout << std::endl;
+
+    me->equip(tmp);
+    std::cout << std::endl;
+
     // ICharacter* bob = new Character("bob");
     // me->use(0, *bob);
     // me->use(1, *bob);
     // delete bob;
     delete me;
     std::cout << std::endl;
+
     delete src;
+    std::cout << std::endl;
 
     return 0;
 }
