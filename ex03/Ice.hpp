@@ -6,6 +6,14 @@
 class Ice: virtual public AMateria {
 
 public:
+    /* constructor */
+    Ice();
+
+    /* destructor */
+    ~Ice();
+
+    /* general */
+    AMateria* clone() const;
     void use(ICharacter& target);
 
 };
