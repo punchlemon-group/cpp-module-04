@@ -9,6 +9,7 @@ SRCS = \
 $(addsuffix .cpp, \
 	main \
 	AMateria \
+	Cure \
 	Ice \
 	MateriaSource \
 ) \

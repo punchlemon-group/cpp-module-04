@@ -2,12 +2,16 @@
 #include "AMateria.hpp"
 #include "MateriaSource.hpp"
 #include "Ice.hpp"
+#include "Cure.hpp"
 
 int main()
 {
     IMateriaSource* src = new MateriaSource();
+    std::cout << std::endl;
     src->learnMateria(new Ice());
-    // src->learnMateria(new Cure());
+    std::cout << std::endl;
+    src->learnMateria(new Cure());
+    std::cout << std::endl;
     // ICharacter* me = new Character("me");
     // AMateria* tmp;
     // tmp = src->createMateria("ice");

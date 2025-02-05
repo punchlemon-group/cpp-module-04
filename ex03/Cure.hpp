@@ -6,6 +6,14 @@
 class Cure: virtual public AMateria {
 
 public:
+    /* constructor */
+    Cure();
+
+    /* destructor */
+    ~Cure();
+
+    /* general */
+    AMateria* clone() const;
     void use(ICharacter& target);
 
 };
