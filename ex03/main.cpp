@@ -3,6 +3,7 @@
 #include "MateriaSource.hpp"
 #include "Ice.hpp"
 #include "Cure.hpp"
+#include "Character.hpp"
 
 int main()
 {
@@ -12,7 +13,8 @@ int main()
     std::cout << std::endl;
     src->learnMateria(new Cure());
     std::cout << std::endl;
-    // ICharacter* me = new Character("me");
+    ICharacter* me = new Character("me");
+    std::cout << std::endl;
     // AMateria* tmp;
     // tmp = src->createMateria("ice");
     // me->equip(tmp);
@@ -22,7 +24,8 @@ int main()
     // me->use(0, *bob);
     // me->use(1, *bob);
     // delete bob;
-    // delete me;
+    delete me;
+    std::cout << std::endl;
     delete src;
 
     return 0;
