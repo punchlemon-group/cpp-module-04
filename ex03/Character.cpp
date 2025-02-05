@@ -33,7 +33,7 @@ void Character::unequip(int idx) {
         if (_materiaIdx < NUM_OF_MATERIAS) {
             std::cout << "unequip " << _materias[idx]->getType() << std::endl;
             delete _materias[idx];
-            _materias[idx] = NULL; // WIP もしかしたらコピーコンストラクタを作成したらdelete書かなくて済むかも
+            _materias[idx] = NULL;
             --_materiaIdx;
         }
     }
