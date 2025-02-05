@@ -1,14 +1,14 @@
 #include "MateriaSource.hpp"
 
 MateriaSource::MateriaSource() :_materiaId(0) {
-    for (int i = 0; i < 4; ++i) {
+    for (int i = 0; i < NUM_OF_MATERAS; ++i) {
         _materias[i] = NULL;
     }
     std::cout << "MateriaSource default constructor" << std::endl;
 }
 
 MateriaSource::~MateriaSource() {
-    for (int i = 0; i < 4; ++i) {
+    for (int i = 0; i < NUM_OF_MATERAS; ++i) {
         if (_materias[i]) {
             delete _materias[i];
         }
@@ -23,7 +23,11 @@ void MateriaSource::learnMateria(AMateria* materia) {
     }
 }
 
-AMateria* MateriaSource::createMateria(std::string const & type) {
-    (void)type;
-    return NULL; // WIP
+AMateria* MateriaSource::createMateria(const std::string& type) {
+    for (int i = 0; i < NUM_OF_MATERAS; ++i) {
+        if (_materias[i]->getType() == type) {
+            return _materias[i]->clone();
+        }
+    }
+    return NULL;
 }

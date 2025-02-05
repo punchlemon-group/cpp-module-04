@@ -9,7 +9,7 @@ Cure::~Cure() {
 }
 
 AMateria* Cure::clone() const {
-    return NULL;// WIP
+    return new Cure();
 }
 
 void Cure::use(ICharacter& target) {

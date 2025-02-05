@@ -9,14 +9,22 @@ int main()
 {
     IMateriaSource* src = new MateriaSource();
     std::cout << std::endl;
+
     src->learnMateria(new Ice());
     std::cout << std::endl;
+
     src->learnMateria(new Cure());
     std::cout << std::endl;
+
     ICharacter* me = new Character("me");
     std::cout << std::endl;
-    // AMateria* tmp;
-    // tmp = src->createMateria("ice");
+
+    AMateria* tmp;
+    tmp = src->createMateria("ice");
+    std::cout << std::endl;
+
+    delete tmp; // WIP
+    std::cout << std::endl; // WIP
     // me->equip(tmp);
     // tmp = src->createMateria("cure");
     // me->equip(tmp);

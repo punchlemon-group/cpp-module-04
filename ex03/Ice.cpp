@@ -9,7 +9,7 @@ Ice::~Ice() {
 }
 
 AMateria* Ice::clone() const {
-    return NULL;// WIP
+    return new Ice();
 }
 
 void Ice::use(ICharacter& target) {
