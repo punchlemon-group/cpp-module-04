@@ -18,7 +18,7 @@ MateriaSource::~MateriaSource() {
 
 void MateriaSource::learnMateria(AMateria* materia) {
     if (materia) {
-        _materias[_materiaId] = materia;
+        _materias[_materiaId] = materia; // WIP
         ++_materiaId;
     }
 }
