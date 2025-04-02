@@ -22,9 +22,6 @@ public:
     /* general */
     void makeSound() const;
 
-    /* free */
-    friend std::ostream& operator<<(std::ostream& os, const Animal& animal);
-
 protected:
 
     /* setter */
@@ -40,5 +37,8 @@ private:
     std::string _type;
     std::string _sound;
 };
+
+/* global */
+std::ostream& operator<<(std::ostream& os, const Animal& animal);
 
 #endif /* __ANIMAL_HPP__ */

@@ -40,12 +40,6 @@ const std::string& AAnimal::getType() const {
     return _type;
 }
 
-/* free */
-std::ostream& operator<<(std::ostream& os, const AAnimal& animal) {
-    os << animal.getType();
-    return os;
-}
-
 
 /* protected */
 /* setter */
@@ -72,4 +66,11 @@ void AAnimal::_initByCopy(const AAnimal& copy) {
     } else {
         _brain = NULL;
     }
+}
+
+
+/* global */
+std::ostream& operator<<(std::ostream& os, const AAnimal& animal) {
+    os << animal.getType();
+    return os;
 }

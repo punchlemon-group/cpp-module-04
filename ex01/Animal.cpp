@@ -45,12 +45,6 @@ void Animal::makeSound() const {
     std::cout << *this << ": <" << getSound() << ">" << std::endl;
 }
 
-/* free */
-std::ostream& operator<<(std::ostream& os, const Animal& animal) {
-    os << animal.getType();
-    return os;
-}
-
 
 /* protected */
 /* setter */
@@ -77,4 +71,11 @@ void Animal::_initByCopy(const Animal& copy) {
     } else {
         _brain = NULL;
     }
+}
+
+
+/* global */
+std::ostream& operator<<(std::ostream& os, const Animal& animal) {
+    os << animal.getType();
+    return os;
 }

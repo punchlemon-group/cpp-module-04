@@ -23,9 +23,6 @@ public:
     /* general */
     virtual void makeSound() const = 0;
 
-    /* free */
-    friend std::ostream& operator<<(std::ostream& os, const AAnimal& animal);
-
 protected:
 
     /* setter */
@@ -42,5 +39,8 @@ private:
     std::string _sound;
     Brain* _brain;
 };
+
+/* global */
+std::ostream& operator<<(std::ostream& os, const AAnimal& animal);
 
 #endif /* __ANIMAL_HPP__ */
