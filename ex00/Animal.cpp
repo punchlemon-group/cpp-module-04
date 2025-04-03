@@ -31,7 +31,7 @@ const std::string& Animal::getType() const {
 
 /* general */
 void Animal::makeSound() const {
-    std::cout << *this << ": < ... >" << std::endl;
+    std::cout << *this << ": ..." << std::endl;
 }
 
 

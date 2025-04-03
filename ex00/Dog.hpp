@@ -3,17 +3,20 @@
 
 #include "Animal.hpp"
 
-class Dog : virtual public Animal {
+class Dog : public Animal {
 public:
     /* constructor */
     Dog();
+    Dog(const Dog& copy);
+
+    /* operator */
+    Dog& operator=(const Dog& copy);
 
     /* destructor */
     virtual ~Dog();
 
-protected:
-    /* support */
-    virtual void _init(const std::string& sound);
+    /* general */
+    void makeSound() const;
 };
 
 #endif /* __DOG_HPP__ */
