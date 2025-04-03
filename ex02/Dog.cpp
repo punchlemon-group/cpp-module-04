@@ -3,8 +3,21 @@
 /* public */
 /* constructor */
 Dog::Dog() {
-    _init("Bow wow!");
+    _type = "Dog";
     std::cout << *this << ": Dog default constructor" << std::endl;
+}
+
+Dog::Dog(const Dog& copy) : Animal(copy) {
+    std::cout << *this << ": Dog copy constructor" << std::endl;
+}
+
+/* operator */
+Dog& Dog::operator=(const Dog& copy) {
+    std::cout << *this << ": Dog assignation operator" << std::endl;
+    if (this != &copy) {
+        Animal::operator=(copy);
+    }
+    return *this;
 }
 
 /* destructor */
@@ -14,13 +27,5 @@ Dog::~Dog() {
 
 /* general */
 void Dog::makeSound() const {
-    std::cout << *this << ": <" << getSound() << ">" << std::endl;
-}
-
-
-/* protected */
-/* support */
-void Dog::_init(const std::string& sound) {
-    _setType("Dog");
-    _setSound(sound);
+    std::cout << *this << ": " << "Woof woof!🐕🐕🐕🐕" << std::endl;
 }
