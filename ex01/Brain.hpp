@@ -10,6 +10,8 @@ public:
     /* constructor */
     Brain();
     Brain(const Brain& copy);
+
+    /* operator */
     Brain& operator=(const Brain& copy);
 
     /* destructor */
@@ -21,13 +23,6 @@ public:
 private:
     /* variable */
     std::string _ideas[100];
-
-    /* setter */
-    void _setIdea(int index, const std::string& idea);
-
-    /* support */
-    virtual void _init();
-    void _initByCopy(const Brain& copy);
 };
 
 #endif /* __BRAIN_HPP__ */

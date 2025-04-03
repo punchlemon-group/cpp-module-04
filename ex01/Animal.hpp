@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include "Brain.hpp"
 
 class Animal {
 public:
@@ -25,6 +26,7 @@ public:
 protected:
     /* variable */
     std::string _type;
+    Brain* _brain;
 };
 
 /* global */
