@@ -32,7 +32,7 @@ int main() {
 
     std::cout << "\n--- Deep copy test (copy constructor) ---\n" << std::endl;
     Dog* originalDog = new Dog();
-    Dog* copiedDog = new Dog(*originalDog);  // コピーコンストラクタを使用
+    Dog* copiedDog = new Dog(*originalDog);
 
     std::cout << "\nDeleting original dog:\n" << std::endl;
     delete originalDog;
