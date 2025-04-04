@@ -7,17 +7,31 @@
 class ICharacter;
 
 class AMateria {
-
 public:
+    /* constructor */
+    AMateria();
+
     AMateria(std::string const & type);
-    std::string const & getType() const;
-    virtual AMateria* clone() const = 0;
-    virtual void use(ICharacter& target) = 0;
+
+    /* copy constructor */
+    AMateria(AMateria const & copy);
+
+    /* operator */
+    AMateria& operator=(AMateria const & copy);
+
+    /* destructor */
     virtual ~AMateria();
 
-private:
-    std::string _type;
+    /* getter */
+    std::string const & getType() const;
 
+    /* general */
+    virtual AMateria* clone() const = 0;
+    virtual void use(ICharacter& target);
+
+protected:
+    /* variable */
+    std::string _type;
 };
 
 #endif /* __AMATERIA_HPP__ */

@@ -10,7 +10,15 @@ class Character: public ICharacter {
 
 public:
     /* constructor */
+    Character();
+
     Character(const std::string& name);
+
+    /* copy constructor */
+    Character(const Character& copy);
+
+    /* operator */
+    Character& operator=(const Character& copy);
 
     /* destructor */
     ~Character();
@@ -24,6 +32,7 @@ public:
     void use(int idx, ICharacter& target);
 
 private:
+    /* variable */
     std::string _name;
     int _materiaIdx;
     AMateria* _materias[NUM_OF_MATERIAS];

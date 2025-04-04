@@ -9,6 +9,12 @@ public:
     /* constructor */
     Ice();
 
+    /* copy constructor */
+    Ice(const Ice& copy);
+
+    /* operator */
+    Ice& operator=(const Ice& copy);
+
     /* destructor */
     ~Ice();
 

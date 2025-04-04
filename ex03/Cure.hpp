@@ -9,6 +9,12 @@ public:
     /* constructor */
     Cure();
 
+    /* copy constructor */
+    Cure(const Cure& copy);
+
+    /* operator */
+    Cure& operator=(const Cure& copy);
+
     /* destructor */
     ~Cure();
 

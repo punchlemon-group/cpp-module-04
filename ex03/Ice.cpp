@@ -1,18 +1,31 @@
 #include "Ice.hpp"
 #include "ICharacter.hpp"
 
+/* constructor */
 Ice::Ice() : AMateria("ice") {
-    std::cout << "Ice default constructor" << std::endl;
 }
 
+/* copy constructor */
+Ice::Ice(const Ice& copy) : AMateria(copy) {
+}
+
+/* operator */
+Ice& Ice::operator=(const Ice& copy) {
+    if (this != &copy) {
+        AMateria::operator=(copy);
+    }
+    return *this;
+}
+
+/* destructor */
 Ice::~Ice() {
-    std::cout << "Ice destructor" << std::endl;
 }
 
+/* general */
 AMateria* Ice::clone() const {
     return new Ice();
 }
 
 void Ice::use(ICharacter& target) {
-    std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
+    std::cout << "* shoot an ice bolt at " << target.getName() << " *" << std::endl;
 }

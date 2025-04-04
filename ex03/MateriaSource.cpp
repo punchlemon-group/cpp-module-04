@@ -1,23 +1,52 @@
 #include "MateriaSource.hpp"
 
+/* constructor */
 MateriaSource::MateriaSource() :_materiaIdx(0) {
     for (int i = 0; i < NUM_OF_MATERIAS; ++i) {
         _materias[i] = NULL;
     }
-    std::cout << "MateriaSource default constructor" << std::endl;
 }
 
+/* copy constructor */
+MateriaSource::MateriaSource(const MateriaSource& copy) : _materiaIdx(copy._materiaIdx) {
+    for (int i = 0; i < NUM_OF_MATERIAS; ++i) {
+        if (copy._materias[i]) {
+            _materias[i] = copy._materias[i]->clone();
+        } else {
+            _materias[i] = NULL;
+        }
+    }
+}
+
+/* operator */
+MateriaSource& MateriaSource::operator=(const MateriaSource& copy) {
+    if (this != &copy) {
+        _materiaIdx = copy._materiaIdx;
+        for (int i = 0; i < NUM_OF_MATERIAS; ++i) {
+            if (_materias[i]) {
+                delete _materias[i];
+            }
+            if (copy._materias[i]) {
+                _materias[i] = copy._materias[i]->clone();
+            } else {
+                _materias[i] = NULL;
+            }
+        }
+    }
+    return *this;
+}
+
+/* destructor */
 MateriaSource::~MateriaSource() {
     for (int i = 0; i < _materiaIdx; ++i) {
         delete _materias[i];
     }
-    std::cout << "MateriaSource destructor" << std::endl;
 }
 
+/* general */
 void MateriaSource::learnMateria(AMateria* m) {
     if (m) {
         if (_materiaIdx < NUM_OF_MATERIAS) {
-            std::cout << "learn " << m->getType() << std::endl;
             _materias[_materiaIdx] = m;
             ++_materiaIdx;
         }

@@ -10,6 +10,12 @@ public:
     /* constructor */
     MateriaSource();
 
+    /* copy constructor */
+    MateriaSource(const MateriaSource& copy);
+
+    /* operator */
+    MateriaSource& operator=(const MateriaSource& copy);
+
     /* destructor */
     virtual ~MateriaSource();
 

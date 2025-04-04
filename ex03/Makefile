@@ -1,6 +1,6 @@
 .PHONY: all clean fclean re
 
-NAME = interfaceAndRecap
+NAME = a.out
 
 OUT_DIR = out
 SRCS_DIR = srcs

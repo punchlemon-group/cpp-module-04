@@ -1,18 +1,31 @@
 #include "Cure.hpp"
 #include "ICharacter.hpp"
 
+/* constructor */
 Cure::Cure() : AMateria("cure") {
-    std::cout << "Cure default constructor" << std::endl;
 }
 
+/* copy constructor */
+Cure::Cure(const Cure& copy) : AMateria(copy) {
+}
+
+/* operator */
+Cure& Cure::operator=(const Cure& copy) {
+    if (this != &copy) {
+        AMateria::operator=(copy);
+    }
+    return *this;
+}
+
+/* destructor */
 Cure::~Cure() {
-    std::cout << "Cure destructor" << std::endl;
 }
 
+/* general */
 AMateria* Cure::clone() const {
     return new Cure();
 }
 
 void Cure::use(ICharacter& target) {
-    std::cout << "* shoot an ice bolt at " << target.getName() << " *" << std::endl;
+    std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
 }
