@@ -1,9 +1,9 @@
 #ifndef __DOG_HPP__
 #define __DOG_HPP__
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 
-class Dog : public Animal {
+class Dog : public AAnimal {
 public:
     /* constructor */
     Dog();

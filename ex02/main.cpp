@@ -2,15 +2,15 @@
 #include "Cat.hpp"
 
 int main() {
-    const Animal* i = new Dog();
-    const Animal* j = new Cat();
+    const AAnimal* i = new Dog();
+    const AAnimal* j = new Cat();
 
     delete i;
     delete j;
 
-    std::cout << "\n--- Animal array test ---\n" << std::endl;
+    std::cout << "\n--- AAnimal array test ---\n" << std::endl;
     const int arraySize = 10;
-    Animal* animals[arraySize];
+    AAnimal* animals[arraySize];
 
     std::cout << "\nCreating " << arraySize << " animals:\n" << std::endl;
     for (int k = 0; k < arraySize; k++) {

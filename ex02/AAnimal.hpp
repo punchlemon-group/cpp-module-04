@@ -1,5 +1,5 @@
-#ifndef __ANIMAL_HPP__
-#define __ANIMAL_HPP__
+#ifndef __AANIMAL_HPP__
+#define __AANIMAL_HPP__
 
 #include <iostream>
 #include <string>
@@ -9,8 +9,9 @@ class AAnimal {
 public:
     /* constructor */
     AAnimal();
-    AAnimal(const std::string& sounds);
     AAnimal(const AAnimal& copy);
+
+    /* operator */
     AAnimal& operator=(const AAnimal& copy);
 
     /* destructor */
@@ -18,29 +19,17 @@ public:
 
     /* getter */
     const std::string& getType() const;
-    const std::string& getSound() const;
 
     /* general */
     virtual void makeSound() const = 0;
 
 protected:
-
-    /* setter */
-    void _setSound(const std::string& sound);
-    void _setType(const std::string& type);
-
-    /* support */
-    virtual void _init(const std::string& sound);
-    void _initByCopy(const AAnimal& copy);
-
-private:
     /* variable */
     std::string _type;
-    std::string _sound;
     Brain* _brain;
 };
 
 /* global */
 std::ostream& operator<<(std::ostream& os, const AAnimal& animal);
 
-#endif /* __ANIMAL_HPP__ */
+#endif /* __AANIMAL_HPP__ */

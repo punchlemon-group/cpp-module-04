@@ -1,9 +1,9 @@
 #ifndef __CAT_HPP__
 #define __CAT_HPP__
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 
-class Cat : public Animal {
+class Cat : public AAnimal {
 public:
     /* constructor */
     Cat();
